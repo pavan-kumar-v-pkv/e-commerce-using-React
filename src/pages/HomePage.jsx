@@ -7,12 +7,12 @@ export function HomePage() {
   const [products, setProducts] = useState([]);
   const [cart, setCart] = useState([]);
   useEffect(() => {
-    axios.get('http://localhost:3001/api/products')
+    axios.get('/api/products')
     .then((response) => {
       setProducts(response.data);
     });
 
-    axios.get('http://localhost:3001/api/cart-items')
+    axios.get('/api/cart-items')
     .then((response) => {
       setCart(response.data);
     });
